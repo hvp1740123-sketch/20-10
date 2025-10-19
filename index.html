@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thiệp chúc mừng 20/10 💖</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: linear-gradient(135deg, #ffe6eb, #ffd1dc);
+      font-family: 'Segoe UI', cursive;
+      overflow: hidden;
+    }
+    h1 {
+      color: #e91e63;
+      font-size: 48px;
+      animation: fadeIn 2s ease-in;
+    }
+    p {
+      color: #555;
+      font-size: 24px;
+      margin-top: 20px;
+      animation: fadeIn 3s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .flower {
+      position: absolute;
+      top: -50px;
+      animation: fall 10s linear infinite;
+      opacity: 0.8;
+    }
+    @keyframes fall {
+      0% { transform: translateY(-50px) rotate(0deg); }
+      100% { transform: translateY(110vh) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <h1>💐 Chúc mừng Ngày Phụ nữ Việt Nam 20/10! 💐</h1>
+  <p>Chúc bạn luôn xinh đẹp, hạnh phúc và tràn ngập yêu thương 💖</p>
+
+  <!-- Nhạc nền -->
+  <audio autoplay loop controls>
+    <source src="https://www.example.com/link-bai-hat.mp3" type="audio/mpeg">
+    Trình duyệt của bạn không hỗ trợ phát nhạc.
+  </audio>
+
+  <!-- Hiệu ứng rơi hoa -->
+  <script>
+    const flowerEmojis = ["🌸", "💮", "🌺", "🌷", "🌹"];
+    function createFlower() {
+      const flower = document.createElement('div');
+      flower.classList.add('flower');
+      flower.textContent = flowerEmojis[Math.floor(Math.random() * flowerEmojis.length)];
+      flower.style.left = Math.random() * 100 + 'vw';
+      flower.style.fontSize = Math.random() * 30 + 20 + 'px';
+      flower.style.animationDuration = Math.random() * 5 + 5 + 's';
+      document.body.appendChild(flower);
+      setTimeout(() => flower.remove(), 10000);
+    }
+    setInterval(createFlower, 300);
+  </script>
+</body>
+</html>
